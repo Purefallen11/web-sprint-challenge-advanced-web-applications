@@ -15,7 +15,7 @@ const App = () => {
       <LambdaHeader/>
       <Header/>
       <RouteContainer>
-        <Route exact path="/">
+        <Route exact path="/login">
           <Login/>
         </Route>          
       </RouteContainer>

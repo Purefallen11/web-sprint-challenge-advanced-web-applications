@@ -5,9 +5,9 @@ import styled from 'styled-components';
 const Header = () => {
     return(
         <HeaderStyle>
-            <p>Blogger Pro</p>
+            <p><Link to="/">Blogger Pro</Link></p>
             <MenuStyle>
-                <li><Link to="/">Login</Link></li>
+                <li><Link to="/login">Login</Link></li>
                 <li><Link to="view">View</Link></li>
                 <li><Link to="logout">Logout</Link></li>
             </MenuStyle>
@@ -23,6 +23,10 @@ const HeaderStyle = styled.div`
     display:flex;
     align-items: center;
     justify-content: space-between;
+    
+    a{
+        text-decoration: none;
+    }
 
     p {
         font-weight: bold;
