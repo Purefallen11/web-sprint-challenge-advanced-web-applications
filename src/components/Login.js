@@ -1,12 +1,38 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styled from 'styled-components';
 
 const Login = () => {
     
+    const [form, setForm] = useState({
+        userName: '',
+        password: ''
+    })
+
     return(<ComponentContainer>
         <ModalContainer>
             <h1>Welcome to Blogger Pro</h1>
             <h2>Please enter your account information.</h2>
+            <div>
+                <FormGroup>
+                    <Label htmlFor="name">
+                        <Input
+                            name="username"
+                            value={form.userName}
+                            placeholder="Enter Your name"
+                            id="username"
+                        />
+                    </Label>
+                    <Label>
+                        <Input
+                            name="password"
+                            value={form.password}
+                            placeholder="Enter Your Password"
+                            id="password"
+                        />
+                    </Label>
+                    <Button>Login</Button>
+                </FormGroup>
+            </div>
         </ModalContainer>
     </ComponentContainer>);
 }
@@ -53,5 +79,5 @@ const Input = styled.input`
 
 const Button = styled.button`
     padding:1rem;
-    width: 100%;
+    width:101%;
 `
