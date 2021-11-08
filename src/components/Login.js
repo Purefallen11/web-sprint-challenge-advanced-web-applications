@@ -28,7 +28,7 @@ const Login = () => {
             .post('http://localhost:5000/api/login', form)
             .then(res => { localStorage.setItem('token', res.data.payload) })
             .catch(err => { console.log(err) })
-        history.push('/protected')
+        history.push('/view')
         setForm({
             username: '',
             password:''
@@ -61,7 +61,7 @@ const Login = () => {
                             onChange={handleChange}
                         />
                     </Label>
-                    <Button>Login</Button>
+                    <Button id="submit">Login</Button>
                 </FormGroup>
             </div>
         </ModalContainer>
