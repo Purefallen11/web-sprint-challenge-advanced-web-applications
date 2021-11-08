@@ -26,8 +26,8 @@ In this project, you will demonstrate your mastery of these skills by creating *
 
 ### Basic Routing
 > *Build the needed utilities to restrict access to private routes.*
-* [x] Build a `Route` component that renders rendering `Login.js` to the path `/`.
-* [ ] Build a `Route` component that renders rendering `Login.js` to the path `/login`.
+* [?] Build a `Route` component that renders rendering `Login.js` to the path `/`.
+* [x] Build a `Route` component that renders rendering `Login.js` to the path `/login`.
 * [ ] Build a `Route` component that renders rendering `View.js` to the path `/view`.
 * [ ] Build a `Route` component that renders rendering `Logout.js` to the path `/logout`.
 

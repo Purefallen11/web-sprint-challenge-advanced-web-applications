@@ -9,6 +9,7 @@ import styled from 'styled-components';
 const Login = () => {
     
     const history = useHistory()
+
     const [form, setForm] = useState({
         username: '',
         password: ''
@@ -21,10 +22,10 @@ const Login = () => {
         });
     }
 
-    const handleSubmit = () => {
+    const handleSubmit = (e) => {
         e.preventDefault()
         axios
-            .post('http://localhost:5000/api/login', state)
+            .post('http://localhost:5000/api/login', form)
             .then(res => { localStorage.setItem('token', res.data.payload) })
             .catch(err => { console.log(err) })
         history.push('/protected')
@@ -32,7 +33,6 @@ const Login = () => {
             username: '',
             password:''
         })
-
 
     }
 
@@ -54,6 +54,7 @@ const Login = () => {
                     <Label>
                         <Input
                             name="password"
+                            type="password"
                             value={form.password}
                             placeholder="Enter Your Password"
                             id="password"

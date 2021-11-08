@@ -17,7 +17,8 @@ const App = () => {
       <RouteContainer>
         <Route exact path="/login">
           <Login/>
-        </Route>          
+        </Route>
+        <PrivateRoute path='/protected' component={View} />
       </RouteContainer>
     </AppContainer>
   )
